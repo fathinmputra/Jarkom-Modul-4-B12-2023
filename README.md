@@ -94,83 +94,83 @@ Kita perlu melakukan **routing** pada **seluruh Router**. Langkah-langkah melaku
   
 **Route List:**
 **Aura**
-- Kanan:
-  - Ke A10 lewat Denken:
-    - Network 192.184.22.0
-    - Mask 255.255.255.0
-    - Next Hop 192.184.24.130
+Kanan:
+- Ke A10 lewat Denken:
+  - Network 192.184.22.0
+  - Mask 255.255.255.0
+  - Next Hop 192.184.24.130
 
-- Kiri:
-  - Ke A6 lewat Frieren:
-    - Network 192.184.24.120
-    - Mask 255.255.255.252
-    - Next Hop 192.184.24.126
-  - Ke A7 lewat Frieren:
-    - Network 192.184.24.64
-    - Mask 255.255.255.224
-    - Next Hop 192.184.24.126
-  - Ke A3 lewat Frieren:
-    - Network 192.184.24.116
-    - Mask 255.255.255.252
-    - Next Hop 192.184.24.126
-  - Ke A4 lewat Frieren:
-    - Network 192.184.24.96
-    - Mask 255.255.255.248
-    - Next Hop 192.184.24.126
-  - Ke A5 lewat Frieren:
-    - Network 192.184.8.0
-    - Mask 255.255.252.0
-    - Next Hop 192.184.24.126
-  - Ke A2 lewat Frieren:
-    - Network 192.184.24.112
-    - Mask 255.255.255.252
-    - Next Hop 192.184.24.126
-  - Ke A1 lewat Frieren:
-    - Network 192.184.0.0
-    - Mask 255.255.248.0
-    - Next Hop 192.184.24.126
+Kiri:
+- Ke A6 lewat Frieren:
+  - Network 192.184.24.120
+  - Mask 255.255.255.252
+  - Next Hop 192.184.24.126
+- Ke A7 lewat Frieren:
+  - Network 192.184.24.64
+  - Mask 255.255.255.224
+  - Next Hop 192.184.24.126
+- Ke A3 lewat Frieren:
+  - Network 192.184.24.116
+  - Mask 255.255.255.252
+  - Next Hop 192.184.24.126
+- Ke A4 lewat Frieren:
+  - Network 192.184.24.96
+  - Mask 255.255.255.248
+  - Next Hop 192.184.24.126
+- Ke A5 lewat Frieren:
+  - Network 192.184.8.0
+  - Mask 255.255.252.0
+  - Next Hop 192.184.24.126
+- Ke A2 lewat Frieren:
+  - Network 192.184.24.112
+  - Mask 255.255.255.252
+  - Next Hop 192.184.24.126
+- Ke A1 lewat Frieren:
+  - Network 192.184.0.0
+  - Mask 255.255.248.0
+  - Next Hop 192.184.24.126
 
-- Bawah:
-  - Ke A12 lewat Eisen:
-    - Network 192.184.24.104
-    - Mask 255.255.255.248
-    - Next Hop 192.184.24.134
-  - Ke A13 lewat Eisen:
-    - Network 192.184.24.136
-    - Mask 255.255.255.252
-    - Next Hop 192.184.24.134
-  - Ke A14 lewat Eisen:
-    - Network 192.184.24.140
-    - Mask 255.255.255.252
-    - Next Hop 192.184.24.134
-  - Ke A15 lewat Eisen:
-    - Network 192.184.12.0
-    - Mask 255.255.252.0
-    - Next Hop 192.184.24.134
-  - Ke A16 lewat Eisen:
-    - Network 192.184.23.0
-    - Mask 255.255.255.0
-    - Next Hop 192.184.24.134
-  - Ke A17 lewat Eisen:
-    - Network 192.184.24.144
-    - Mask 255.255.255.252
-    - Next Hop 192.184.24.134
-  - Ke A18 lewat Eisen:
-    - Network 192.184.20.0
-    - Mask 255.255.254.0
-    - Next Hop 192.184.24.134
-  - Ke A19 lewat Eisen:
-    - Network 192.184.24.148
-    - Mask 255.255.255.252
-    - Next Hop 192.184.24.134
-  - Ke A20 lewat Eisen:
-    - Network 192.184.24.0
-    - Mask 255.255.255.192
-    - Next Hop 192.184.24.134
-  - Ke A21 lewat Eisen:
-    - Network 192.184.16.0 
-    - Mask 255.255.252.0 
-    - Next Hop 192.184.24.134
+Bawah:
+- Ke A12 lewat Eisen:
+  - Network 192.184.24.104
+  - Mask 255.255.255.248
+  - Next Hop 192.184.24.134
+- Ke A13 lewat Eisen:
+  - Network 192.184.24.136
+  - Mask 255.255.255.252
+  - Next Hop 192.184.24.134
+- Ke A14 lewat Eisen:
+  - Network 192.184.24.140
+  - Mask 255.255.255.252
+  - Next Hop 192.184.24.134
+- Ke A15 lewat Eisen:
+  - Network 192.184.12.0
+  - Mask 255.255.252.0
+  - Next Hop 192.184.24.134
+- Ke A16 lewat Eisen:
+  - Network 192.184.23.0
+  - Mask 255.255.255.0
+  - Next Hop 192.184.24.134
+- Ke A17 lewat Eisen:
+  - Network 192.184.24.144
+  - Mask 255.255.255.252
+  - Next Hop 192.184.24.134
+- Ke A18 lewat Eisen:
+  - Network 192.184.20.0
+  - Mask 255.255.254.0
+  - Next Hop 192.184.24.134
+- Ke A19 lewat Eisen:
+  - Network 192.184.24.148
+  - Mask 255.255.255.252
+  - Next Hop 192.184.24.134
+- Ke A20 lewat Eisen:
+  - Network 192.184.24.0
+  - Mask 255.255.255.192
+  - Next Hop 192.184.24.134
+- Ke A21 lewat Eisen:
+  - Network 192.184.16.0
+  - Mask 255.255.252.0
+  - Next Hop 192.184.24.134
 
 **Denken**
 - Balik ke Aura:
