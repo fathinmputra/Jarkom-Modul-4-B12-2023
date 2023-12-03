@@ -94,117 +94,211 @@ Kita perlu melakukan **routing** pada **seluruh Router**. Langkah-langkah melaku
   
 **Route List:**
 **Aura**
-Kanan :
--ke A10 lewat Denken :
-Network 192.184.22.0 Netmask 255.255.255.0 Next Hop 192.184.24.130 
-Kiri :
--ke A6 lewat Frieren : 
-Network 192.184.24.120 Netmask 255.255.255.252 Next Hop 192.184.24.126
--ke A7 lewat Frieren : 
-Network 192.184.24.64 Netmask 255.255.255.224 Next Hop 192.184.24.126
--ke A3 lewat Frieren :
-Network 192.184.24.116 Netmask 255.255.255.252 Next Hop 192.184.24.126
--ke A4 lewat Frieren :
-Network 192.184.24.96 Netmask 255.255.255.248 Next Hop 192.184.24.126
--ke A5 lewat Frieren :
-Network 192.184.8.0 Netmask 255.255.252.0 Next Hop 192.184.24.126
--ke A2 lewat Frieren :
-Network 192.184.24.112 Netmask 255.255.255.252 Next Hop 192.184.24.126
--ke A1 lewat Frieren:
-Network 192.184.0.0 Netmask 255.255.248.0 Next Hop 192.184.24.126
-Bawah :
--ke A12 lewat Eisen :
-Network 192.184.24.104 Netmask 255.255.255.248 Next Hop 192.184.24.134
--ke A13 lewat Eisen :
-Network 192.184.24.136 Netmask 255.255.255.252 Next Hop 192.184.24.134
--ke A14 lewat Eisen :
-Network 192.184.24.140 Netmask 255.255.255.252 Next Hop 192.184.24.134
--ke A15 lewat Eisen :
-Network 192.184.12.0 Netmask 255.255.252.0 Next Hop 192.184.24.134
--ke A16 lewat Eisen :
-Network 192.184.23.0 Netmask 255.255.255.0 Next Hop 192.184.24.134
--ke A17 lewat Eisen :
-Network 192.184.24.144 Netmask 255.255.255.252 Next Hop 192.184.24.134
--ke A18 lewat Eisen :
-Network 192.184.20.0 Netmask 255.255.254.0 Next Hop 192.184.24.134
--ke A19 lewat Eisen :
-Network 192.184.24.148 Netmask 255.255.255.252 Next Hop 192.184.24.134
--ke A20 lewat Eisen :
-Network 192.184.24.0 Netmask 255.255.255.192 Next Hop 192.184.24.134
--ke A21 lewat Eisen :
-Network 192.184.16.0 Netmask 255.255.252.0 Next Hop 192.184.24.134
+- Kanan:
+  - Ke A10 lewat Denken:
+    - Network 192.184.22.0
+    - Mask 255.255.255.0
+    - Next Hop 192.184.24.130
+
+- Kiri:
+  - Ke A6 lewat Frieren:
+    - Network 192.184.24.120
+    - Mask 255.255.255.252
+    - Next Hop 192.184.24.126
+  - Ke A7 lewat Frieren:
+    - Network 192.184.24.64
+    - Mask 255.255.255.224
+    - Next Hop 192.184.24.126
+  - Ke A3 lewat Frieren:
+    - Network 192.184.24.116
+    - Mask 255.255.255.252
+    - Next Hop 192.184.24.126
+  - Ke A4 lewat Frieren:
+    - Network 192.184.24.96
+    - Mask 255.255.255.248
+    - Next Hop 192.184.24.126
+  - Ke A5 lewat Frieren:
+    - Network 192.184.8.0
+    - Mask 255.255.252.0
+    - Next Hop 192.184.24.126
+  - Ke A2 lewat Frieren:
+    - Network 192.184.24.112
+    - Mask 255.255.255.252
+    - Next Hop 192.184.24.126
+  - Ke A1 lewat Frieren:
+    - Network 192.184.0.0
+    - Mask 255.255.248.0
+    - Next Hop 192.184.24.126
+
+- Bawah:
+  - Ke A12 lewat Eisen:
+    - Network 192.184.24.104
+    - Mask 255.255.255.248
+    - Next Hop 192.184.24.134
+  - Ke A13 lewat Eisen:
+    - Network 192.184.24.136
+    - Mask 255.255.255.252
+    - Next Hop 192.184.24.134
+  - Ke A14 lewat Eisen:
+    - Network 192.184.24.140
+    - Mask 255.255.255.252
+    - Next Hop 192.184.24.134
+  - Ke A15 lewat Eisen:
+    - Network 192.184.12.0
+    - Mask 255.255.252.0
+    - Next Hop 192.184.24.134
+  - Ke A16 lewat Eisen:
+    - Network 192.184.23.0
+    - Mask 255.255.255.0
+    - Next Hop 192.184.24.134
+  - Ke A17 lewat Eisen:
+    - Network 192.184.24.144
+    - Mask 255.255.255.252
+    - Next Hop 192.184.24.134
+  - Ke A18 lewat Eisen:
+    - Network 192.184.20.0
+    - Mask 255.255.254.0
+    - Next Hop 192.184.24.134
+  - Ke A19 lewat Eisen:
+    - Network 192.184.24.148
+    - Mask 255.255.255.252
+    - Next Hop 192.184.24.134
+  - Ke A20 lewat Eisen:
+    - Network 192.184.24.0
+    - Mask 255.255.255.192
+    - Next Hop 192.184.24.134
+  - Ke A21 lewat Eisen:
+    - Network 192.184.16.0 
+    - Mask 255.255.252.0 
+    - Next Hop 192.184.24.134
 
 **Denken**
--Balik ke Aura : 
-Network 0.0.0.0 Netmask 0.0.0.0 Next Hop 192.184.24.129
-
+- Balik ke Aura:
+    - Network 0.0.0.0
+    - Netmask 0.0.0.0
+    - Next Hop 192.184.24.129
+      
 **Frieren**
--Ke A5 lewat Flamme : 
-Network 192.184.8.0 Netmask 255.255.252.0 Next Hop 192.184.24.122
--Ke A2 lewat Flamme : 
-Network 192.184.24.112 Netmask 255.255.255.252 Next Hop 192.184.24.122
--Ke A1 lewat Flamme : 
-Network 192.184.0.0 Netmask 255.255.248.0 Next Hop 192.184.24.122
--Ke A3 lewat Flamme:
--Network 192.184.24.116 Netmask 255.255.255.252 Next Hop 192.184.24.122
-Ke A4 lewat Flamme:
--Network 192.184.24.96 Netmask 255.255.255.248 Next Hop 192.184.24.122
-Balik ke Aura : 
--Network 0.0.0.0 Netmask 0.0.0.0 Next Hop 192.184.24.125
+- Ke A5 lewat Flamme:
+  - Network 192.184.8.0
+  - Mask 255.255.252.0
+  - Next Hop 192.184.24.122
+- Ke A2 lewat Flamme:
+  - Network 192.184.24.112
+  - Mask 255.255.255.252
+  - Next Hop 192.184.24.122
+- Ke A1 lewat Flamme:
+  - Network 192.184.0.0
+  - Mask 255.255.248.0
+  - Next Hop 192.184.24.122
+- Ke A3 lewat Flamme:
+  - Network 192.184.24.116
+  - Mask 255.255.255.252
+  - Next Hop 192.184.24.122
+- Ke A4 lewat Flamme:
+  - Network 192.184.24.96
+  - Mask 255.255.255.248
+  - Next Hop 192.184.24.122
+- Balik ke Aura:
+  - Network 0.0.0.0
+  - Mask 0.0.0.0
+  - Next Hop 192.184.24.125
+
 
 **Flamme**
--Ke A1 Lewat Fern : 
-Network 192.184.0.0 Netmask 255.255.248.0 Next Hop 192.184.24.114
--Ke A4 Lewat Himmel : 
-Network 192.184.24.96 Netmask 255.255.255.248 Next Hop 192.184.24.118
--Balik ke Frieren : 
-Network 0.0.0.0 Netmask 0.0.0.0 Next Hop 192.184.24.121
+- Ke A1 Lewat Fern:
+  - Network 192.184.0.0
+  - Mask 255.255.248.0
+  - Next Hop 192.184.24.114
+- Ke A4 Lewat Himmel:
+  - Network 192.184.24.96
+  - Mask 255.255.255.248
+  - Next Hop 192.184.24.118
+- Balik ke Frieren:
+  - Network 0.0.0.0
+  - Mask 0.0.0.0
+  - Next Hop 192.184.24.121
 
 **Fern**
--Balik ke Flamme : 
-Network 0.0.0.0 Netmask 0.0.0.0 Next Hop 192.184.24.113
+- Balik ke Flamme:
+  - Network 0.0.0.0
+  - Mask 0.0.0.0
+  - Next Hop 192.184.24.113
 
 **Himmel**
--Balik ke Flamme : 
-Network 0.0.0.0 Netmask 0.0.0.0 Next Hop 192.184.24.117
+- Balik ke Flamme:
+  - Network 0.0.0.0
+  - mask 0.0.0.0
+  - Next Hop 192.184.24.117
+
 
 **Eisen**
--Ke A15 lewat Lugner
-Network 192.184.12.0 Netmask 255.255.252.0 Next Hop 192.184.24.142
--Ke A16 lewat Lugner
-Network 192.184.23.0 Netmask 255.255.255.0 Next Hop 192.184.24.142
--Ke A18 lewat Linie
-Network 192.184.20.0 Netmask 255.255.254.0 Next Hop 192.184.24.146
--Ke A19 lewat Linie 
-Network 192.184.24.148 Netmask 255.255.255.252 Next Hop 192.184.24.146
--Ke A20 lewat Linie
-Network 192.184.24.0 Netmask 255.255.255.192 Next Hop 192.184.24.146
--Ke A21 lewat Linie 
-Network 192.184.16.0 Netmask 255.255.252.0 Next Hop 192.184.24.146
--Balik ke Aura : 
-Network 0.0.0.0 Netmask 0.0.0.0 Next Hop 192.184.24.133
+- Ke A15 lewat Lugner
+  - Network 192.184.12.0
+  - Mask 255.255.252.0
+  - Next Hop 192.184.24.142
+- Ke A16 lewat Lugner
+  - Network 192.184.23.0
+  - Mask 255.255.255.0
+  - Next Hop 192.184.24.142
+- Ke A18 lewat Linie
+  - Network 192.184.20.0
+  - Mask 255.255.254.0
+  - Next Hop 192.184.24.146
+- Ke A19 lewat Linie
+  - Network 192.184.24.148
+  - Mask 255.255.255.252
+  - Next Hop 192.184.24.146
+- Ke A20 lewat Linie
+  - Network 192.184.24.0
+  - Mask 255.255.255.192
+  - Next Hop 192.184.24.146
+- Ke A21 lewat Linie
+  - Network 192.184.16.0
+  - Mask 255.255.252.0
+  - Next Hop 192.184.24.146
+- Balik ke Aura
+  - Network 0.0.0.0
+  - Mask 0.0.0.0
+  - Next Hop 192.184.24.133
+
 
 **Lugner**
--Balik ke Eisen : 
-Network 0.0.0.0 Netmask 0.0.0.0 Next Hop 192.184.24.141
+- Balik ke Eisen:
+  - Network 0.0.0.0
+  - Mask 0.0.0.0
+  - Next Hop 192.184.24.141
 
 **Linie**
--Ke A20 lewat Lawine : 
-Network 192.184.24.0 Netmask 255.255.255.192 Next Hop 192.184.24.150
--Ke A21 lewat Lawine : 
-Network 192.184.16.0 Netmask 255.255.252.0 Next Hop 192.184.24.150
--Balik ke Eisen : 
-Network 0.0.0.0 Netmask 0.0.0.0 Next Hop 192.184.24.145
+- Ke A20 lewat Lawine:
+  - Network 192.184.24.0
+  - Mask 255.255.255.192
+  - Next Hop 192.184.24.150
+- Ke A21 lewat Lawine:
+  - Network 192.184.16.0
+  - Mask 255.255.252.0
+  - Next Hop 192.184.24.150
+- Balik ke Eisen:
+  - Network 0.0.0.0
+  - Mask 0.0.0.0
+  - Next Hop 192.184.24.145
 
 **Lawine**
--Ke A21 lewat Heiter : 
-Network 192.184.16.0 Netmask 255.255.252.0 Next Hop 192.184.24.2
--Balik Ke Linie : 
-Network 0.0.0.0 Netmask 0.0.0.0 Next Hop 192.184.24.149
+- Ke A21 lewat Heiter:
+  - Network 192.184.16.0
+  - Mask 255.255.252.0
+  - Next Hop 192.184.24.2
+- Balik Ke Linie:
+  - Network 0.0.0.0
+  - Mask 0.0.0.0
+  - Next Hop 192.184.24.149
 
 **Heiter**
--Balik ke Lawine : 
-Network 0.0.0.0 Netmask 0.0.0.0 Next Hop 192.184.24.1
+- Balik ke Lawine:
+  - Network 0.0.0.0
+  - Mask 0.0.0.0
+  - Next Hop 192.184.24.1
+
 
 
 
