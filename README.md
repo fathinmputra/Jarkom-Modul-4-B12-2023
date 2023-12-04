@@ -339,12 +339,12 @@ Berikut adalah penggabungan subnetnya :
 
 - **Penggabungan Keempat**
 
-![image](https://github.com/fathinmputra/Jarkom-Modul-4-B12-2023/assets/133391111/5c95e593-b538-44a8-87e5-f486a2153c5b)
+![image](https://github.com/fathinmputra/Jarkom-Modul-4-B12-2023/assets/133391111/ee1b2b32-d34a-491a-bf37-8acf3fa54a50)
 ![image](https://github.com/fathinmputra/Jarkom-Modul-4-B12-2023/assets/133391111/86df01c6-8fb4-4762-b397-ab53690416a0)
 
 - **Penggabungan Kelima**
 
-![image](https://github.com/fathinmputra/Jarkom-Modul-4-B12-2023/assets/133391111/ee1b2b32-d34a-491a-bf37-8acf3fa54a50)
+![image](https://github.com/fathinmputra/Jarkom-Modul-4-B12-2023/assets/133391111/5c95e593-b538-44a8-87e5-f486a2153c5b)
 ![image](https://github.com/fathinmputra/Jarkom-Modul-4-B12-2023/assets/133391111/c6f7d5ff-71aa-4f9b-88ff-b0bd2d187588)
 
 - **Penggabungan Keenam**
