@@ -299,8 +299,16 @@ Bawah:
   - Mask 0.0.0.0
   - Next Hop 192.184.24.1
 
+### Hasil Testing
 
+Berikut adalah beberapa testing yang dilakukan :
 
+<img width="392" alt="image" src="https://github.com/fathinmputra/Jarkom-Modul-4-B12-2023/assets/103252800/9cc43fdd-bd42-4325-8148-3188a3e2c61a">
+
+Dari gambar diatas telah berhasil (**successful**) melakukan testing :
+- Flamme (Router) ke Linie (Router)
+- LaubHills (Client) ke RiegelCanyon (Client)
+- Sein (Server) ke Stark (Server)
 
 ## METODE CIDR
 ### Topologi GNS3
