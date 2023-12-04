@@ -302,4 +302,546 @@ Bawah:
 
 
 
-## METODE VLSM
+## METODE CIDR
+### Topologi GNS3
+![image](https://github.com/fathinmputra/Jarkom-Modul-4-B12-2023/assets/133391111/e272ed4f-82fc-4896-97e1-e40a3787df92)
+
+- Pada topologi GNS ini, ditambahkan switch diantara router. Sesuai dengan perintah yang ada di modul 4 :
+
+![image](https://github.com/fathinmputra/Jarkom-Modul-4-B12-2023/assets/133391111/798bd316-500e-48fa-8cd4-0b33bcd57b70)
+
+### Penggabungan Subnet
+
+Berikut adalah penggabungan subnetnya :
+
+- **Penggabungan Pertama**
+
+![image](https://github.com/fathinmputra/Jarkom-Modul-4-B12-2023/assets/133391111/57b8f35a-adfd-4687-8031-7a31fc8c6b72)
+![image](https://github.com/fathinmputra/Jarkom-Modul-4-B12-2023/assets/133391111/86f5db40-2702-4748-8813-471435838728)
+
+- **Penggabungan Kedua**
+
+![image](https://github.com/fathinmputra/Jarkom-Modul-4-B12-2023/assets/133391111/c6125006-7b5c-48eb-85e6-7717a316eabb)
+![image](https://github.com/fathinmputra/Jarkom-Modul-4-B12-2023/assets/133391111/6031781a-7480-4d2c-9d22-4888ff853851)
+
+- **Penggabungan Ketiga**
+
+![image](https://github.com/fathinmputra/Jarkom-Modul-4-B12-2023/assets/133391111/82637f6f-bee3-4512-bbb3-26e9b68e762c)
+![image](https://github.com/fathinmputra/Jarkom-Modul-4-B12-2023/assets/133391111/c556fa8f-e965-4c6c-b8ed-862de3748516)
+
+- **Penggabungan Keempat**
+
+![image](https://github.com/fathinmputra/Jarkom-Modul-4-B12-2023/assets/133391111/5c95e593-b538-44a8-87e5-f486a2153c5b)
+![image](https://github.com/fathinmputra/Jarkom-Modul-4-B12-2023/assets/133391111/86df01c6-8fb4-4762-b397-ab53690416a0)
+
+- **Penggabungan Kelima**
+
+![image](https://github.com/fathinmputra/Jarkom-Modul-4-B12-2023/assets/133391111/ee1b2b32-d34a-491a-bf37-8acf3fa54a50)
+![image](https://github.com/fathinmputra/Jarkom-Modul-4-B12-2023/assets/133391111/c6f7d5ff-71aa-4f9b-88ff-b0bd2d187588)
+
+- **Penggabungan Keenam**
+
+![image](https://github.com/fathinmputra/Jarkom-Modul-4-B12-2023/assets/133391111/969144de-b725-4b92-aa9c-13f984fa2462)
+![image](https://github.com/fathinmputra/Jarkom-Modul-4-B12-2023/assets/133391111/0886a4ff-3bd2-480f-b4b6-216170c67da4)
+
+- **Penggabungan Ketujuh**
+
+![image](https://github.com/fathinmputra/Jarkom-Modul-4-B12-2023/assets/133391111/fda63dfc-525c-450b-b3da-e90fa4c9c3ad)
+![image](https://github.com/fathinmputra/Jarkom-Modul-4-B12-2023/assets/133391111/bbbb7fc9-ff27-475c-9cde-226e5b9b8fd3)
+
+- **Penggabungan Kedelapan**
+
+![image](https://github.com/fathinmputra/Jarkom-Modul-4-B12-2023/assets/133391111/00e67386-1c53-4bd3-a31b-2b9fcb1b2ee2)
+![image](https://github.com/fathinmputra/Jarkom-Modul-4-B12-2023/assets/133391111/ae9dbb5f-0c04-4c89-b041-b4413664d46a)
+
+### Tree CIDR
+Setelah menggabungkan subnetnya, dapat dihitung untuk pembagian IP nya menggunakan tree. Berikut pembagiannya menggunakan tree :
+
+![image](https://github.com/fathinmputra/Jarkom-Modul-4-B12-2023/assets/133391111/bc65449a-39b6-45b0-b05e-faedf6aa94c9)
+
+### Pembagian IP
+Berikut adalah pembagian IP sesuai dengan tree sebelumnya :
+
+![image](https://github.com/fathinmputra/Jarkom-Modul-4-B12-2023/assets/133391111/cd4eded5-7d94-4264-b75e-df2dbc955c70)
+
+### Configuration Network
+Setelah mendapatkan hasil pembagian IP, kita dapat memasukkan pembagian IP tersebut ke dalam konfigurasi di `GNS3`.
+
+Berikut adalah konfigurasi `router, client, dan server` pada `GNS3` menggunakan pembagian IP `CIDR` :
+
+**ROUTER :**
+
+- Aura
+```
+auto eth0
+iface eth0 inet dhcp
+
+# kanan
+auto eth1
+iface eth1 inet static
+	address 192.185.0.1
+	netmask 255.255.255.252
+
+# bawah
+auto eth2
+iface eth2 inet static
+	address 192.184.64.1
+	netmask 255.255.255.252
+
+# kiri
+auto eth3
+iface eth3 inet static
+	address 192.186.128.1
+	netmask 255.255.255.252
+```
+
+- Denken
+```
+# 0/0 - kiri
+auto eth0
+iface eth0 inet static
+	address 192.185.0.2
+	netmask 255.255.255.252
+
+# 0/1 - kanan
+auto eth1
+iface eth1 inet static
+	address 192.185.1.1
+	netmask 255.255.255.0
+```
+
+- Frieren
+```
+# kanan
+auto eth0
+iface eth0 inet static
+	address 192.186.128.2
+	netmask 255.255.255.252
+
+# atas
+auto eth1
+iface eth1 inet static
+	address 192.186.64.1
+	netmask 255.255.255.224
+
+# kiri
+auto eth2
+iface eth2 inet static
+	address 192.186.32.1
+	netmask 255.255.255.252
+```
+
+- Flamme
+```
+# kanan
+auto eth0
+iface eth0 inet static
+	address 192.186.32.2
+	netmask 255.255.255.252
+
+# atas
+auto eth1
+iface eth1 inet static
+	address 192.186.24.1
+	netmask 255.255.255.252
+
+# kiri
+auto eth2
+iface eth2 inet static
+	address 192.186.4.1
+	netmask 255.255.252.0
+
+# bawah
+auto eth3
+iface eth3 inet static
+	address 192.186.0.1
+	netmask 255.255.255.252
+```
+
+- Fern
+```
+# bawah
+auto eth0
+iface eth0 inet static
+	address 192.186.24.2
+	netmask 255.255.255.252
+
+# kiri
+auto eth1
+iface eth1 inet static
+	address 192.186.16.1
+	netmask 255.255.248.0
+```
+
+- Himmel
+```
+# atas
+auto eth0
+iface eth0 inet static
+	address 192.186.0.2
+	netmask 255.255.255.252
+
+# bawah
+auto eth1
+iface eth1 inet static
+	address 192.186.0.9
+	netmask 255.255.255.248
+```
+
+- Eisen
+```
+# atas
+auto eth0
+iface eth0 inet static
+	address 192.184.64.2
+	netmask 255.255.255.252
+
+# kanan atas
+auto eth1
+iface eth1 inet static
+	address 192.184.16.1
+	netmask 255.255.255.252
+
+# kiri
+auto eth2
+iface eth2 inet static
+	address 192.184.32.1
+	netmask 255.255.255.248
+
+# bawah
+auto eth3
+iface eth3 inet static
+	address 192.184.160.1
+	netmask 255.255.255.252
+
+# kanan
+auto eth4
+iface eth4 inet static
+	address 192.184.8.1
+	netmask 255.255.255.252
+```
+
+- Lugner
+```
+# kiri
+auto eth0
+iface eth0 inet static
+	address 192.184.8.2
+	netmask 255.255.255.252
+
+# kanan
+auto eth1
+iface eth1 inet static
+	address 192.184.0.1
+	netmask 255.255.252.0
+
+# kanan bawah
+auto eth2
+iface eth2 inet static
+	address 192.184.4.1
+	netmask 255.255.255.0
+```
+
+- Linie
+```
+# atas
+auto eth0
+iface eth0 inet static
+	address 192.184.160.2
+	netmask 255.255.255.252
+
+# bawah
+auto eth1
+iface eth1 inet static
+	address 192.184.144.1
+	netmask 255.255.254.0
+
+# kiri
+auto eth2
+iface eth2 inet static
+	address 192.184.136.1
+	netmask 255.255.255.252
+```
+
+- Lawine
+```
+# kanan
+auto eth0
+iface eth0 inet static
+	address 192.184.136.2
+	netmask 255.255.255.252
+
+# kiri
+auto eth1
+iface eth1 inet static
+	address 192.184.128.1
+	netmask 255.255.255.192
+```
+
+- Heiter
+```
+# atas
+auto eth0
+iface eth0 inet static
+	address 192.184.128.2
+	netmask 255.255.255.192
+
+# kiri
+auto eth1
+iface eth1 inet static
+	address 192.184.132.1
+	netmask 255.255.252.0
+```
+
+**CLIENT :** 
+
+- RoyalCapital 
+```
+auto eth0
+iface eth0 inet static
+	address 192.185.1.2
+	netmask 255.255.255.0
+        	gateway 192.185.1.1
+```
+
+- WillieRegion
+```
+auto eth0
+iface eth0 inet static
+	address 192.185.1.3
+	netmask 255.255.255.0
+        	gateway 192.185.1.1
+```
+
+- LakeKorridor
+```
+auto eth0
+iface eth0 inet static
+	address 192.186.64.2
+	netmask 255.255.255.224
+        	gateway 192.185.64.1
+```
+
+- LaubHills
+```
+auto eth0
+iface eth0 inet static
+	address 192.186.16.2
+	netmask 255.255.248.0
+       	gateway 192.186.16.1
+```
+
+- AppetitRegion
+```
+auto eth0
+iface eth0 inet static
+	address 192.186.16.3
+	netmask 255.255.248.0
+        	gateway 192.186.16.1
+```
+
+- RohrRoad
+```
+auto eth0
+iface eth0 inet static
+	address 192.186.4.2
+	netmask 255.255.252.0
+        	gateway 192.186.4.1
+```
+
+- SchwerMountains
+```
+auto eth0
+iface eth0 inet static
+	address 192.186.0.10
+	netmask 255.255.255.248
+        gateway 192.186.0.9
+```
+
+- TurkRegion 
+```
+auto eth0
+iface eth0 inet static
+	address 192.184.0.2
+	netmask 255.255.252.0
+        	gateway 192.184.0.1
+```
+
+- GrobeForest
+```
+auto eth0
+iface eth0 inet static
+	address 192.184.4.2
+	netmask 255.255.255.0
+        	gateway 192.184.4.1
+```
+
+- GranzChannel
+```
+auto eth0
+iface eth0 inet static
+	address 192.184.144.2
+	netmask 255.255.254.0
+        	gateway 192.184.144.1
+```
+
+- BredtRegion
+```
+auto eth0
+iface eth0 inet static
+	address 192.184.128.2
+	netmask 255.255.255.192
+        	gateway 192.184.128.1
+```
+
+- RiegelCanyon
+```
+auto eth0
+iface eth0 inet static
+	address 192.184.132.3
+	netmask 255.255.252.0
+        	gateway 192.184.132.1
+```
+
+**SERVER :** 
+
+- Stark 
+```
+auto eth0
+iface eth0 inet static
+	address 192.184.16.2
+	netmask 255.255.255.252
+        	gateway 192.184.16.1
+```
+
+- Richter 
+```
+auto eth0
+iface eth0 inet static
+	address 192.184.32.2
+	netmask 255.255.255.248
+        	gateway 192.184.32.1
+```
+
+- Revolte 
+```
+auto eth0
+iface eth0 inet static
+	address 192.184.32.3
+	netmask 255.255.255.248
+        	gateway 192.184.32.1
+```
+
+- Sein
+```
+auto eth0
+iface eth0 inet static
+	address 192.184.132.2
+	netmask 255.255.252.0
+        	gateway 192.184.132.1
+```
+
+### Routing
+Supaya semua subnet dapat saling terhubung, maka diperlukan routing. Berikut adalah perintah routing pada masing masing router GNS :
+
+- Aura
+```
+route add -net 192.185.1.0 netmask 255.255.255.0 gw 192.185.0.2 
+route add -net 192.186.32.0 netmask 255.255.255.252 gw 192.186.128.2
+route add -net 192.186.64.0 netmask 255.255.255.224 gw 192.186.128.2
+route add -net 192.186.0.0 netmask 255.255.255.252 gw 192.186.128.2
+route add -net 192.186.0.8 netmask 255.255.255.248 gw 192.186.128.2
+route add -net 192.186.4.0 netmask 255.255.252.0 gw 192.186.128.2
+route add -net 192.186.24.0 netmask 255.255.255.252 gw 192.186.128.2
+route add -net 192.186.16.0 netmask 255.255.248.0 gw 192.186.128.2
+route add -net 192.184.32.0 netmask 255.255.255.248 gw 192.184.64.2
+route add -net 192.184.16.0 netmask 255.255.255.252 gw 192.184.64.2
+route add -net 192.184.8.0 netmask 255.255.255.252 gw 192.184.64.2
+route add -net 192.184.0.0 netmask 255.255.252.0 gw 192.184.64.2
+route add -net 192.184.4.0 netmask 255.255.255.0 gw 192.184.64.2
+route add -net 192.184.160.0 netmask 255.255.255.252 gw 192.184.64.2
+route add -net 192.184.144.0 netmask 255.255.254.0 gw 192.184.64.2
+route add -net 192.184.136.0 netmask 255.255.255.252 gw 192.184.64.2
+route add -net 192.184.128.0 netmask 255.255.255.192 gw 192.184.64.2
+route add -net 192.184.132.0 netmask 255.255.252.0 gw 192.184.64.2
+```
+
+- Denken
+```
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.185.0.1
+```
+
+- Frieren
+```
+route add -net 192.186.4.0 netmask 255.255.252.0 gw 192.186.32.2
+route add -net 192.186.24.0 netmask 255.255.255.252 gw 192.186.32.2
+route add -net 192.186.16.0 netmask 255.255.248.0 gw 192.186.32.2
+route add -net 192.186.0.0 netmask 255.255.255.252 gw 192.186.32.2
+route add -net 192.186.0.8 netmask 255.255.255.248 gw 192.186.32.2
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.186.128.1
+```
+
+- Flamme
+```
+route add -net 192.186.16.0 netmask 255.255.248.0 gw 192.186.24.2
+route add -net 192.186.0.8 netmask 255.255.255.248 gw 192.186.0.1
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.186.32.1
+```
+
+- Fern
+```
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.186.24.1
+```
+
+- Himmel
+```
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.186.0.1
+```
+
+- Eisen
+```
+route add -net 192.184.0.0 netmask 255.255.252.0 gw 192.184.8.2
+route add -net 192.184.4.0 netmask 255.255.255.0 gw 192.184.8.2
+route add -net 192.184.144.0 netmask 255.255.254.0 gw 192.184.160.2
+route add -net 192.184.136.0 netmask 255.255.255.252 gw 192.184.160.2
+route add -net 192.184.128.0 netmask 255.255.255.192 gw 192.184.160.2
+route add -net 192.184.132.0 netmask 255.255.252.0 gw 192.184.160.2
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.184.64.1
+```
+
+- Lugner
+```
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.184.8.1
+```
+
+- Linie
+```
+route add -net 192.184.128.0 netmask 255.255.255.192 gw 192.184.136.2
+route add -net 192.184.132.0 netmask 255.255.252.0 gw 192.184.136.2
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.184.160.1
+```
+
+- Lawine
+```
+route add -net 192.184.132.0 netmask 255.255.252.0 gw 192.184.128.2
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.184.136.1
+```
+
+- Heiter
+```
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.184.128.1
+```
+
+> Pada setiap router di GNS3, terdapat file `script.sh` yang berisi command-command routing di atas sehingga tinggal bash filenya untuk melakukan routing.
+
+### Hasil Testing
+
+Berikut adalah beberapa testing yang dilakukan :
+
+- Ping LaubHills dari GranzChannel
+
+![image](https://github.com/fathinmputra/Jarkom-Modul-4-B12-2023/assets/133391111/a241d2bd-662a-4917-9bf0-eb5c97d7f088)
+
+- Ping RiegelCanyon dari RoyalCapital
+
+![image](https://github.com/fathinmputra/Jarkom-Modul-4-B12-2023/assets/133391111/ca8db38b-3674-40e3-b21e-7e77a798c57e)
